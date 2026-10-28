@@ -59,7 +59,7 @@
             </div>
         </section>
 
-        <!-- 4. SECCIÓN DOBLE: OPINION ARTICLES (Con Diagrama Técnico) + TECH ADS -->
+       <!-- 4. SECCIÓN DOBLE: OPINION ARTICLES (Diagrama Interactivo) + TECH ADS -->
         <section id="opinion" class="section-block split-layout">
             <div class="opinion-column">
                 <h2 class="section-title">Opinion & Architecture</h2>
@@ -68,37 +68,38 @@
                     <h3>When Code Gets a Body: How Physical AI Operates</h3>
                     <p>Moving AI from screens into industrial environments demands a real-time loop between sensors, local neural processing, and mechanical actuators.</p>
 
-                    <!-- DIAGRAMA TÉCNICO / INFOGRAFÍA -->
+                    <!-- DIAGRAMA TÉCNICO INTERACTIVO -->
                     <figure class="diagram-container">
                         <div class="diagram-flow">
-                            <div class="diagram-step">
+                            <div class="diagram-step active" data-detail="Stage 1 (Perception): LiDAR lasers and thermal cameras scan 360° surroundings at 60 FPS to build a 3D map of high-voltage towers or warehouse aisles.">
                                 <strong>1. Perception</strong>
                                 <span>LiDAR, Thermal &amp; Vision Sensors</span>
                             </div>
                             <div class="diagram-arrow">&rarr;</div>
-                            <div class="diagram-step">
+                            <div class="diagram-step" data-detail="Stage 2 (Edge AI Brain): On-board neural processing units (NPUs) analyze obstacles locally in under 5ms without depending on cloud internet.">
                                 <strong>2. Edge AI Brain</strong>
                                 <span>Local Neural Network (&lt;5ms)</span>
                             </div>
                             <div class="diagram-arrow">&rarr;</div>
-                            <div class="diagram-step">
+                            <div class="diagram-step" data-detail="Stage 3 (Physical Action): Flight controllers and robotic actuators adjust rotor speed and mechanical joints instantly to stabilize movement.">
                                 <strong>3. Physical Action</strong>
                                 <span>Flight Control &amp; Robotic Motors</span>
                             </div>
                         </div>
-                        <figcaption>Fig 1. Closed-loop autonomous control architecture in industrial UAVs and robots.</figcaption>
+                        <figcaption id="diagram-caption">💡 Click on any stage above to inspect how autonomous systems process data in real time.</figcaption>
                     </figure>
                 </article>
             </div>
 
-            <!-- Columna derecha: Publicidad Informática -->
+            <!-- Columna derecha: Publicidad Informática Interactiva -->
             <aside class="ads-column">
                 <h2 class="section-title">Tech Ads</h2>
                 <div class="ad-banner">
                     <span class="ad-label">Sponsored</span>
                     <h4>SkyGrid OS v4.0</h4>
                     <p>Cloud fleet management &amp; telemetry for industrial drones. Deploy in 5 minutes.</p>
-                    <button class="btn-ad">Request Demo</button>
+                    <button id="btn-demo" class="btn-ad">Request Demo</button>
+                    <p id="ad-status" class="ad-status-text"></p>
                 </div>
             </aside>
         </section>
@@ -147,6 +148,7 @@
             <p class="copyright">Developed for Team God of war Ragnarok (2026)</p>
         </div>
     </footer>
-
+<!-- Conexión con nuestro archivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
