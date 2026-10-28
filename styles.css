@@ -358,3 +358,30 @@ body {
     text-align: center;
     font-style: italic;
 }
+
+/* =========================================================
+   11. ESTILOS DE INTERACTIVIDAD (JavaScript)
+   ========================================================= */
+.diagram-step {
+    cursor: pointer; /* Cambia el mouse a una manito para indicar que es clicable */
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.diagram-step:hover {
+    transform: translateY(-2px);
+}
+
+/* Clase que JavaScript le pondrá a la etapa seleccionada */
+.diagram-step.active {
+    border-left: 4px solid var(--accent-drone);
+    background-color: #1E293B;
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
+}
+
+.ad-status-text {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--accent-ai) !important;
+    font-weight: 600;
+    min-height: 20px;
+}
