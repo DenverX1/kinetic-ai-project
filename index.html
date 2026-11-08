@@ -9,18 +9,22 @@
 </head>
 <body>
 
-    <!-- 1. BARRA DE NAVEGACIÓN FIJA -->
-    <header class="navbar">
-        <div class="logo">KINETIC<span>//AI</span></div>
+   <!-- 1. BARRA DE NAVEGACIÓN DETALLADA -->
+    <header class="navbar" id="top">
+        <a href="#top" class="logo">KINETIC<span>//AI</span> <small class="logo-sub">TECH PORTAL</small></a>
         <nav>
             <ul class="nav-links">
-                <li><a href="#news">Featured News</a></li>
-                <li><a href="#opinion">Opinion & Ads</a></li>
-                <li><a href="#trivia">Tech Trivia</a></li>
-                <li><a href="#podcast">Podcast</a></li>
-                <li><a href="#references">References</a></li>
+                <li><a href="#news"><span class="nav-num">01.</span> Featured News</a></li>
+                <li><a href="#opinion"><span class="nav-num">02.</span> Opinion</a></li>
+                <li><a href="#ads"><span class="nav-num">03.</span> Tech Ads</a></li>
+                <li><a href="#trivia"><span class="nav-num">04.</span> Tech Trivia</a></li>
+                <li><a href="#podcast"><span class="nav-num">05.</span> Podcast</a></li>
+                <li><a href="#references"><span class="nav-num">06.</span> References</a></li>
             </ul>
         </nav>
+        <div class="nav-status">
+            <span class="status-dot"></span> 2026 Edition
+        </div>
     </header>
 
     <!-- 2. PORTADA (HERO SECTION) - Bajo texto, alto impacto -->
@@ -59,16 +63,17 @@
             </div>
         </section>
 
-       <!-- 4. SECCIÓN DOBLE: OPINION ARTICLES (Diagrama Interactivo) + TECH ADS -->
+       <!-- 4. SECCIÓN DOBLE: OPINION ARTICLES + TECH ADS (Equilibrio Imagen/Texto) -->
         <section id="opinion" class="section-block split-layout">
             <div class="opinion-column">
                 <h2 class="section-title">Opinion & Architecture</h2>
+                
+                <!-- Artículo 1: Con Diagrama Interactivo -->
                 <article class="card">
                     <span class="tag">System Architecture</span>
                     <h3>When Code Gets a Body: How Physical AI Operates</h3>
                     <p>Moving AI from screens into industrial environments demands a real-time loop between sensors, local neural processing, and mechanical actuators.</p>
 
-                    <!-- DIAGRAMA TÉCNICO INTERACTIVO -->
                     <figure class="diagram-container">
                         <div class="diagram-flow">
                             <div class="diagram-step active" data-detail="Stage 1 (Perception): LiDAR lasers and thermal cameras scan 360° surroundings at 60 FPS to build a 3D map of high-voltage towers or warehouse aisles.">
@@ -89,15 +94,26 @@
                         <figcaption id="diagram-caption">💡 Click on any stage above to inspect how autonomous systems process data in real time.</figcaption>
                     </figure>
                 </article>
+
+                <!-- Artículo 2: Tarjeta horizontal (Foto a la izquierda + Opinión a la derecha) -->
+                <article class="card opinion-horizontal">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Engineer supervising robotic arm" class="opinion-img">
+                    <div class="opinion-text">
+                        <span class="tag">Workforce Impact</span>
+                        <h3>Replacing Dangerous Tasks, Not Engineers</h3>
+                        <p>Autonomous drones and robots are not eliminating human roles; they are shifting technicians from hazardous field inspections to high-level fleet supervision.</p>
+                    </div>
+                </article>
             </div>
 
-            <!-- Columna derecha: Publicidad Informática Interactiva -->
-            <aside class="ads-column">
+            <!-- Columna derecha: Publicidad con Imagen Visual -->
+            <aside id="ads" class="ads-column">
                 <h2 class="section-title">Tech Ads</h2>
                 <div class="ad-banner">
                     <span class="ad-label">Sponsored</span>
+                    <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=600&q=80" alt="Industrial UAV Drone" class="ad-img">
                     <h4>SkyGrid OS v4.0</h4>
-                    <p>Cloud fleet management &amp; telemetry for industrial drones. Deploy in 5 minutes.</p>
+                    <p>Cloud fleet management &amp; real-time telemetry for industrial drones. Deploy in 5 minutes.</p>
                     <button id="btn-demo" class="btn-ad">Request Demo</button>
                     <p id="ad-status" class="ad-status-text"></p>
                 </div>
@@ -129,7 +145,7 @@
             <div class="card podcast-card">
                 <p>Listen to our team explain (in Spanish) the architecture, UI/UX design, and coding process behind this platform.</p>
                 <audio controls class="audio-player">
-                    <source src="podcast.mp3" type="audio/mpeg">
+                    <source src="podcast.mpeg" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
