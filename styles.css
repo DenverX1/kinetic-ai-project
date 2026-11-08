@@ -485,3 +485,84 @@ body {
         width: 100%;
     }
 }
+
+/* Iluminación automática del menú (ScrollSpy) */
+.nav-links a.active-link {
+    color: var(--accent-ai);
+}
+
+.nav-links a.active-link::after {
+    width: 100%;
+}
+
+/* =========================================================
+   13. MODO TELEMETRÍA Y FICHAS TÉCNICAS DESPLEGABLES
+   ========================================================= */
+/* Hace clicable el indicador de la barra superior */
+.nav-status {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.nav-status:hover {
+    background-color: rgba(6, 182, 212, 0.22);
+    transform: translateY(-1px);
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.25);
+}
+
+/* Botón para abrir/cerrar especificaciones en Featured News */
+.btn-specs {
+    margin-top: 14px;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--accent-ai);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-specs:hover {
+    background-color: rgba(6, 182, 212, 0.1);
+    border-color: var(--accent-ai);
+}
+
+/* Panel oculto con los datos técnicos */
+.specs-panel {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 12px;
+    background-color: rgba(11, 15, 25, 0.75);
+    border-left: 2px solid var(--accent-drone);
+    border-radius: 4px;
+    list-style: none;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+     font-family: monospace;
+}
+
+.specs-panel.open {
+    display: block;
+    animation: fadeInSpecs 0.25s ease;
+}
+
+.specs-panel li {
+    margin-bottom: 4px;
+}
+
+.specs-panel li strong {
+    color: var(--text-primary);
+}
+
+@keyframes fadeInSpecs {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
